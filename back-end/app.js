@@ -6,13 +6,14 @@ const bcrypt = require( 'bcrypt' );
 
 var express = require( 'express' );
 const session = require( 'express-session' );
-require('dotenv').config(); 
-require( './Database/database' );   
-const secret = process.env.Secret_key;
 const cors = require( 'cors' );
 var path = require( 'path' );
 var cookieParser = require( 'cookie-parser' );
 var logger = require( 'morgan' ); 
+
+require( './Database/database' );   
+require('dotenv').config(); 
+const secret = process.env.Secret_key;
 // Passport middleware
 var app = express();
 app.set( 'view engine', 'ejs' );
@@ -20,7 +21,8 @@ app.use(session({
   secret: secret, // Replace with your own secret key
   resave: false,
   saveUninitialized: false,
-}));
+} ) );
+app.use(cors())
 app.use( passport.initialize() );
 
 app.use( passport.session() );
