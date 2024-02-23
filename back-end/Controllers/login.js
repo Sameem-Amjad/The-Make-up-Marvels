@@ -19,7 +19,7 @@ const login = async ( req, res ) =>
                 if ( isMatch )
                 {
                     let klo = { 
-                        token: jwt.sign( { user: User }, secret, { expiresIn: '1h' } ), 
+                        token: jwt.sign( { user: User }, secret, { expiresIn: '1m' } ), 
                         userEmail: email
                     };
                     res.send( klo );
