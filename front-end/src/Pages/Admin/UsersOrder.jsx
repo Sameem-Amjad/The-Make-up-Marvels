@@ -5,7 +5,7 @@ const UsersOrder = () =>
     const [ product, setProduct ] = useState( [] );
     useEffect( () =>
     {
-        const apiUrl = "http://localhost:4000/users-Orders";
+        const apiUrl = "https://the-make-up-marvels.onrender.com/users-Orders";
         axios.get( apiUrl )
             .then( ( response ) =>
             {

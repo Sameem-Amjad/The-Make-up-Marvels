@@ -12,7 +12,7 @@ function Profile ()
     }, [] );
     const getUserOrder = async () =>
     {
-        let response = await fetch( `http://localhost:4000/userOrdersById/${ token.user._id }` );
+        let response = await fetch( `https://the-make-up-marvels.onrender.com/userOrdersById/${ token.user._id }` );
         response = await response.json();
         if ( response )
         {

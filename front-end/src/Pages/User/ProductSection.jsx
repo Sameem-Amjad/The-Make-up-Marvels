@@ -7,7 +7,7 @@ const ProductSection = () =>
     const [ product, setProduct ] = useState( [] );
     useEffect( () =>
     {
-        const apiUrl = "http://localhost:4000/product";
+        const apiUrl = "https://the-make-up-marvels.onrender.com/product";
         axios.get( apiUrl )
             .then( ( response ) =>
             {
