@@ -12,7 +12,7 @@ const DeleteProduct = () =>
     const productAddedDate = Date.now();
     const collectionData = async () =>
     {
-        let result = await fetch( 'https://the-make-up-marvels.onrender.com/admin/delete-product', {
+        let result = await fetch( 'http://51.20.87.247:4000/admin/delete-product', {
             method: 'POST',
             body: JSON.stringify( { productName, productDescription, quality, quantity, imageUrl, productAddedDate } ),
             headers: { 'Content-Type': 'application/json' },
