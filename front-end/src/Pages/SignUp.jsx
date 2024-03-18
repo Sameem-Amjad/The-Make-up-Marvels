@@ -16,7 +16,7 @@ const SignUp = () =>
             alert( "Please Enter Complete Info" );
         else
         {
-            let result = await fetch( 'http://51.20.87.247:4000/signup', {
+            let result = await fetch( 'http://172.31.20.61:4000/signup', {
                 method: 'POST',
                 body: JSON.stringify( { name, email, password, confirmPassword } ),
                 headers: { 'Content-Type': 'application/json' },

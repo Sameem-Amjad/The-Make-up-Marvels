@@ -7,7 +7,7 @@ const ProductSection = () =>
     const [ product, setProduct ] = useState( [] );
     useEffect( () =>
     {
-        const apiUrl = "http://51.20.87.247:4000/product";
+        const apiUrl = "http://172.31.20.61:4000/product";
         axios.get( apiUrl )
             .then( ( response ) =>
             {

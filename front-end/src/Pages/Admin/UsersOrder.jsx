@@ -5,7 +5,7 @@ const UsersOrder = () =>
     const [ product, setProduct ] = useState( [] );
     useEffect( () =>
     {
-        const apiUrl = "http://51.20.87.247:4000/users-Orders";
+        const apiUrl = "http://172.31.20.61:4000/users-Orders";
         axios.get( apiUrl )
             .then( ( response ) =>
             {

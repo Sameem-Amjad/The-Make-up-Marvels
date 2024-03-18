@@ -13,7 +13,7 @@ const UpdateProduct = () =>
     const productAddedDate = Date.now();
     const collectionData = async () =>
     {
-        let result = await fetch( 'http://51.20.87.247:4000/admin/update-product', {
+        let result = await fetch( 'http://172.31.20.61:4000/admin/update-product', {
             method: 'POST',
             body: JSON.stringify( { productName, productDescription, quality, quantity, imageUrl, productAddedDate,updateName } ),
             headers: { 'Content-Type': 'application/json' },

@@ -13,7 +13,7 @@ const AddProduct = () =>
     const productAddedDate = Date.now();
     const collectionData =async () =>
     {
-        let result = await fetch( 'http://51.20.87.247:4000/admin/add-product', {
+        let result = await fetch( 'http://172.31.20.61:4000/admin/add-product', {
             method: 'POST',
             body: JSON.stringify( { productName, productDescription,quality,quantity,imageUrl,productAddedDate } ),
             headers: { 'Content-Type': 'application/json' },
