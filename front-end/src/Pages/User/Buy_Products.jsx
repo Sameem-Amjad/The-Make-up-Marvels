@@ -11,7 +11,7 @@ const Buy_Products = () =>
     {
         const product = selectedProduct.find( ( e ) => e._id === product_id );
         product.user_id = auth.user._id;
-        let res = await fetch( 'http://172.31.20.61:4000/buy-product', {
+        let res = await fetch( 'http://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:4000/buy-product', {
             method: 'POST',
             body: JSON.stringify( { product } ),
             headers: { 'Content-Type': 'application/json' },

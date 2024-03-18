@@ -10,7 +10,7 @@ const Dashboard = () =>
     }, [] );
     let getUsersOrders = async () =>
     {
-        let response = await fetch( 'http://172.31.20.61:4000/admin/getUsers' );
+        let response = await fetch( 'http://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:4000/admin/getUsers' );
         if ( response )
         {
             response = await response.json();

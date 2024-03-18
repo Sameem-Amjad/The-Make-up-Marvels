@@ -12,7 +12,7 @@ function Profile ()
     }, [] );
     const getUserOrder = async () =>
     {
-        let response = await fetch( `http://172.31.20.61:4000/userOrdersById/${ token.user._id }` );
+        let response = await fetch( `http://ec2-16-16-202-180.eu-north-1.compute.amazonaws.com:4000/userOrdersById/${ token.user._id }` );
         response = await response.json();
         if ( response )
         {
