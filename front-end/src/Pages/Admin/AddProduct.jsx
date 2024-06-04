@@ -13,7 +13,9 @@ const AddProduct = () =>
     const productAddedDate = Date.now();
     const collectionData =async () =>
     {
+
         let result = await fetch( 'https://the-make-up-marvels.onrender.com/admin/add-product', {
+
             method: 'POST',
             body: JSON.stringify( { productName, productDescription,quality,quantity,imageUrl,productAddedDate } ),
             headers: { 'Content-Type': 'application/json' },

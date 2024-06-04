@@ -16,7 +16,9 @@ const SignUp = () =>
             alert( "Please Enter Complete Info" );
         else
         {
+
             let result = await fetch( 'https://the-make-up-marvels.onrender.com/signup', {
+
                 method: 'POST',
                 body: JSON.stringify( { name, email, password, confirmPassword } ),
                 headers: { 'Content-Type': 'application/json' },

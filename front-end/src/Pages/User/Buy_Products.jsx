@@ -11,6 +11,7 @@ const Buy_Products = () =>
     {
         const product = selectedProduct.find( ( e ) => e._id === product_id );
         product.user_id = auth.user._id;
+
         let res = await fetch( 'https://the-make-up-marvels.onrender.com/buy-product', {
             method: 'POST',
             body: JSON.stringify( { product } ),
